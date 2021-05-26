@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While, Do-While and For Loops</title>
+
+        <script>
+            // Do-While Loop
+            do {
+                console.log('Playing Game...');
+                var continuePlaying = confirm('Continue Playing?');
+            } while (continuePlaying);
+
+            console.log('The End');
+
+            // While Loop
+            var count = 10;
+            while (count > 0) {
+                console.log('Count: ', count--);
+            }
+            console.log('While Loop Ended');
+
+            // For Loop
+
+            for (var daysInWeek = 1; daysInWeek <= 7; daysInWeek++) {
+                console.log('Day:', daysInWeek);
+            }
+            console.log('For Loop Ended');
+        </script>
+    </head>
+
+    <body>
+        <h1>While, Do-While and For Loops</h1>
+    </body>
+</html>

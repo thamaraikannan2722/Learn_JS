@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function</title>
+
+        <script>
+            //Syntax
+                                  //Parameters
+            function functionName(param1, param2) {
+                //Statements
+            }
+                         //Arguements     
+            functionName(            ); // Calling or invoking function
+
+            // Sample
+
+            function greet1() {
+                console.log('Welcome to All my dear friends')
+            } 
+
+            greet1();
+                            //Parameters
+            function greet2(message, name) {
+                return "Hello, " + name + "!" + message;
+            }
+                                      // Arguements
+            var greetMessage = greet2(' How are you?', 'thamarai')
+            console.log(greetMessage);
+
+            function greet3(message, name) {
+                if (name) {
+                    return "Hello, " + name + "!" + message;
+                } else {
+                    return "Hello, Anonymous! " + message;
+                }
+            }
+
+            var greetMessage = greet3('How are you?');
+            console.log(greetMessage);
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Function</h1>
+    </body>
+</html>

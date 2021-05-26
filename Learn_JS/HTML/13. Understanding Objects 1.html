@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Understanding Objects 1</title>
+
+        <script>
+            var obj = new Object(); // Object constructor syntax
+            var obj2 = {}; // Object literal syntax
+
+            var user1 = new Object();
+            user1.name = 'Thamarai';
+            user1.age = '21';
+            
+            user1.sayHi = function() {
+                console.log('Hello, ' + user1.name);
+            }
+
+            user1.sayHi();
+
+            var user2 = {
+                name = 'Ashwin' ,
+                age = '18' ,
+                sayHi: function() {
+                    console.log('Hello, ' + user2.name);
+                }
+            }
+
+            user2.sayHi();
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Understanding Objects 1</h1>
+    </body>
+</html>

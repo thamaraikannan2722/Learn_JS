@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Break and Continue Keywords</title>
+
+        <script>
+            // Break and Continue keywords
+
+            var month = prompt('Enter a number between 1 to 12', 6);
+            for (var days =1; days <=31; days++){
+                if((month == 4 || month == 6 || month == 9 || month == 11) && days == 31) continue
+                    console.log('Day: ', days);
+                    if(month == 2 && days == 28) break;
+            }
+
+            // Using for loop as while loop
+
+            var count = 10;
+            for (; count > 0; ) {
+                console.log('Count: ', count--);
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Break and Continue Keywords</h1>
+    </body>
+</html>

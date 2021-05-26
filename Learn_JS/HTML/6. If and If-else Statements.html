@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If and If-else Statements</title>
+
+        <script>
+            //If Statement
+            // 2 Statements
+                var personOneAge = 50;
+                var personTwoAge = 60;
+                if (personOneAge > personTwoAge) {
+                    console.log('person one is older than person two');
+                }
+
+            // 3 Statements
+            var personThreeAge = 70;
+            
+            if (personOneAge > personTwoAge && personOneAge > personThreeAge) {
+                console.log('person one is older than person two and three')
+            }
+            if (personTwoAge > personOneAge && personTwoAge > personThreeAge) {
+                console.log('person two is older than person one and three');
+            }
+            if (personThreeAge > personOneAge && personThreeAge > personTwoAge) {
+                console.log('person three is older than person one and two');
+            }
+
+            //If-else Statements
+            // 2 Statements
+            if (personOneAge > personTwoAge) {
+                    console.log('person one is older than person two');
+                } else {
+                    console.log('person two is older than person one');
+                }
+            
+            // 3 Statements
+            if (personOneAge > personTwoAge && personOneAge > personThreeAge) {
+                console.log('person one is older than person two and three')
+            }
+            else if (personTwoAge > personThreeAge) {
+                console.log('person two is older than person one and three');
+            }
+            else {
+                console.log('person three is older than person one and two');
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>If and If-else Statements</h1>
+    </body>
+</html>
