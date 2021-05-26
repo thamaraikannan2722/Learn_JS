@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Understanding Objects 2</title>
+
+        <script>
+            var user = new Object();
+            console.log(user);
+
+            user.name = 'JS Learner';
+            user.sayHi = function() {
+                console.log('Hi');
+            }
+            console.log(user.hasOwnProperty('name'));
+            console.log(user.hasOwnProperty('sayHi'));
+            console.log(user.hasOwnProperty('profession'));
+            console.log(user.hasOwnProperty('toString'));
+            console.log(user.hasOwnProperty('valueOf'));
+
+            console.log(user.toString());
+            console.log(user.valueOf());
+
+            // Data Property Attribute - [[Configurable]], [[Enumerable]], [[Writable]], [[Value]]
+
+            //1. [[Configurable]] - It decides whether the Enumerable, Writable, Value will be configurable or not.
+            //2. [[Enumerable]] - It decides whether the property of For In loop will be displayed or not.
+            //3. [[Writable]] - It decides whether the value will be read only or writable.
+            //4. [[Value]] - Storing the actual values.
+
+            var employee1 = {
+                name: 'John'
+            };
+            employee1.name = 'Kumar';
+
+            var employee2 = {};
+
+            Object.defineProperty(employee2, 'name', {
+                configurable: true,
+                writable: false,
+                enumerable: false,
+                value: 'Krishna'
+            });
+
+            employee2.name = 'Ashwin';
+            console.log(employee2.name);
+
+            employee2.designation = 'Developer';
+            employee2.salary = 45000;
+
+            for (prop in employee2){
+                console.log(prop, employee2[prop]);
+            }
+
+            Object.defineProperty(employee2, 'salary', {
+                configurable: true,
+                writable: false,
+                enumerable: false
+            });
+
+            console.log('Results after enumerable change');
+
+            for(prop in employee2){
+                console.log(prop, employee2[prop]);
+            }
+
+            employee2.bonus = 10000;
+            console.log(employee2);
+            delete employee2.bonus;
+            console.log(employee2);
+
+            employee2.bonus = 100000;
+            Object.defineProperty(employee2, 'bonus', {
+                configurable: false
+            });
+            delete employee2.bonus;
+            console.log(employee2);
+
+            //Accessor Property - [[Get]], [[Set]]
+
+            var employee3 = {
+                name: 'Priya',
+                _bonus: 0,
+                yoj: 2010
+            };
+
+            Object.defineProperty(employee3, 'bonus', {
+                get: function () {
+                    return this.bonus;
+                },
+                set: function (newBonus) {
+                    if (newBonus <= 20 && this.yoj < 2015){
+                        this._bonus = newBonus;
+                    }
+                }
+            });
+
+            employee3.bonus = 10;
+            console.log(employee3);
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Understanding Objects 2</h1>
+    </body>
+</html>
