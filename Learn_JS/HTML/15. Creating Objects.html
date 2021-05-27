@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creating Objects</title>
+
+        <script>
+
+            var employee1 = {
+                name: 'Ramesh',
+                designation: 'Team Leader',
+                salary: 45000
+            };
+
+            console.log(employee1 instanceof Object); // True
+
+            var sm1 = {
+                name: 'Youtube',
+                type: 'Video Hosting',
+                popularity: 'High'
+            };
+
+            console.log(sm1 instanceof Object); // True
+
+            function employee(){
+                //
+            }
+
+            console.log(employee());
+            console.log(new employee());
+
+            //function employee() {
+            //    var this = {} //implicity created
+                // Other statements
+            //    return this; // implicity returned
+            //}
+
+            // Constructor Function
+
+            function Employee(id, salary) {
+                this.id = id;
+                this.salary = salary;
+            }
+
+            var employee1 = new Employee('101', 75000);
+            console.log(employee1);
+            var employee2 = new Employee('102', 15000);
+            console.log(employee2);
+
+            console.log(employee1 instanceof Employee);
+            console.log(employee1 instanceof Object);
+        </script>
+    </head>
+
+    <body>
+        <h1>Creating Objects</h1>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Introduction</title>
+
+        <script>
+
+            var employee1 = {
+                name: 'Thamarai',
+                designation: 'Project Manager',
+                salary: '32000'
+            };
+
+            var myArray = {
+                0: 2000,
+                1: 'Dress',
+                2: true,
+                3: null
+            };
+
+            var language = new Array();
+            var students = new Array();
+            console.log(students);
+
+            var frontEndFramework = new Array('Angular JS', 'React JS', 'Vue Js');
+            console.log(frontEndFramework);
+
+            var languages = [];
+            var students = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined];
+            console.log(students);
+
+            var frontEndFramework = ['Angular JS', 'React JS', 'Vue JS'];
+            console.log(frontEndFramework);
+
+            console.log(frontEndFramework[1]);
+            console.log(frontEndFramework.length);
+
+            // How add new item in an Array
+            frontEndFramework[3] = 'Ember JS';
+            frontEndFramework[99] = 'Backbone JS';
+            console.log(frontEndFramework.length);
+
+            console.log(frontEndFramework instanceof Array);
+            console.log(Array.isArray(frontEndFramework))
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Array Introduction</h1>
+    </body>
+</html>

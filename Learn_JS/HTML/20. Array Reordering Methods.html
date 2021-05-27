@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Reordering Methods</title>
+
+        <script>
+            
+            var myMeals = ['Dinner', 'Lunch', 'Breakfast'];
+            var elementrySchoolStandards = [5, 4, 3, 2, 1];
+            console.log(myMeals);
+            console.log(elementrySchoolStandards);
+
+            myMeals.reverse();
+            elementrySchoolStandards.reverse();
+            console.log(myMeals);
+            console.log(elementrySchoolStandards);
+
+            var averageMarkList = [27, 80, 65, 55, 38];
+            averageMarkList.sort();
+            console.log(averageMarkList);
+            
+            averageMarkList.push(100);
+            averageMarkList.sort();
+            console.log(averageMarkList);
+
+            // Ascending order
+            function compare(value1, value2) {
+                console.log('Value1: ', value1);
+                console.log('Value2: ', value2);
+                if (value1 > value2) {
+                    return 1;
+                }
+                else if (value1 < value2) {
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            }
+
+            averageMarkList.sort(compare);
+            console.log(averageMarkList);
+
+            // descending order
+            function descendingOrder(value1, value2) {
+                console.log('Value1: ', value1);
+                console.log('Value2: ', value2);
+                if (value1 > value2) {
+                    return -1;
+                }
+                else if (value1 < value2) {
+                    return 1;
+                }
+                else {
+                    return 0;
+                }
+            }
+
+            averageMarkList.sort(descendingOrder);
+            console.log(averageMarkList);
+
+            // Ascending order - Array Reordering
+            function ascendingOrder(value1, value2) {
+                return value1 - value2;
+            }
+
+            averageMarkList.sort(ascendingOrder);
+            console.log(averageMarkList);
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Array Reordering Methods</h1>
+    </body>
+</html>

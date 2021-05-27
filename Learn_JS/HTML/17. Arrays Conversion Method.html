@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays: Conversion Method</title>
+
+        <script>
+
+            var user = {
+                name: 'JavaScript Learner',
+                sayHi: function() {
+                    return 'Hi';
+                },
+                tostring: function() {
+                    return this.name + ' Says ' + this.sayHi();
+                },
+                valueOf: function() {
+                    return true;
+                },
+                toLocaleString: function() {
+                    return 'JavaScript ..... ';
+                }
+            };
+
+            console.log(user.tostring());
+            console.log(user.valueOf());
+
+            var fruits = ['Apple', 'Orange', 'Mango'];
+            console.log(fruits.toLocaleString());
+            console.log(fruits.toString());
+            alert(fruits.valueOf());
+
+            console.log(fruits.join());
+
+            console.log(fruits.join(' - '));
+            console.log(fruits.join(' + '));
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Arrays: Conversion Method</h1>
+    </body>
+</html>
