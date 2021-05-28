@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math Object</title>
+        <script>
+            
+            // Max Value
+            var maxValue = Math.max(1,22,3,44,5,66,7,88,9,35,55,77);
+            console.log('Maximum Value: ', maxValue);
+
+            // Min Value
+            var minValue = Math.min(1,22,3,44,5,66,7,88,9,35,55,77);
+            console.log('Minimum Value: ', minValue);
+
+            // Rounding Functions - Round Method, Ceil Method, Floor Method
+            // Round Method
+            console.log(Math.round(35.75));
+            console.log(Math.round(35.50));
+            console.log(Math.round(35.25));
+
+            // Ceil Method
+            console.log(Math.ceil(6.1));
+            console.log(Math.ceil(6.5));
+            console.log(Math.ceil(6.9));
+
+            // Floor Method
+            console.log(Math.floor(6.1));
+            console.log(Math.floor(6.5));
+            console.log(Math.floor(6.9));
+
+            // Random Method
+            console.log(Math.random());
+            console.log(Math.random());
+            console.log(Math.random());
+
+            // Dice
+            var randomNumber = Math.floor(Math.random() * numberOfChoices + firstValue);
+
+            var numberOfChoices = 12;
+            var firstValue = 1;
+            var randomNumber = Math.floor(Math.random() * numberOfChoices + firstValue);
+            console.log('Random Number: ', randomNumber);
+
+            // Random Languages
+            function getRandomNumberBetween(from, to) {
+                return Math.floor(Math.random() * (to-from) + from);
+            }
+            var languages = ['c', 'c++', 'java', 'javascript', 'php', 'python', 'ruby', 'go', 'r'];
+            console.log('Random Language: ', languages[getRandomNumberBetween(0, languages.length - 1)]);
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Math Object</h1>
+    </body>
+</html>

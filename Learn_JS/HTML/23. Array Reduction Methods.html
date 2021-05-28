@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Reduction Method</title>
+
+        <script>
+
+            // Array Reduction Method - It will add all the elements in array in iterative function
+            //Syntax
+            // [5,9,28,42,30].reduce(function(accumalator, currentValue, index, array) {.....})
+            var numbers = [10, 20, 30, 40, 50];
+            var sum = numbers.reduce(function(accumulator, currentValue, index) {
+                console.log('Iteration Number: ', index);
+                console.log('Accumulator: ', accumulator);
+                console.log('Current Value: ', currentValue);
+                return accumulator + currentValue;
+            });
+
+            console.log(sum);
+
+            var nestedArray = [[1,2], [3,4], [5,6], [7,8]];
+            var flattenedArray = nestedArray.reduce(function(accumulator, currentValue) {
+                return accumulator.concat(currentValue);
+            });
+
+            console.log(flattenedArray);
+
+            var randomCharacters = ['t','h','a','m','a','r','a','i'];
+            var uniqueCharacters = randomCharacters.reduce(function(accumulator, currentValue){
+                if (accumulator.indexOf(currentValue) === -1) {
+                    accumulator.push(currentValue);
+                }
+                return accumulator;
+            }, []);
+
+            console.log(uniqueCharacters);
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Array Reduction Method</h1>
+    </body>
+</html>
